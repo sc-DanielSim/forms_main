@@ -1,0 +1,19 @@
+@import '@sass/abstracts/vars/colors';
+@import '@sass/abstracts/mixins';
+
+.button-default,
+.default {
+  @include default-link-button();
+}
+.button-success,
+.success {
+  @include default-link-button();
+  &:hover {
+  }
+}
+.button-warning,
+.warning {
+  @include default-link-button();
+  &:hover {
+  }
+}

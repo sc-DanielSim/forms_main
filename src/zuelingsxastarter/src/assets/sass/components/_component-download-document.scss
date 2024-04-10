@@ -1,0 +1,146 @@
+@import '@sass/abstracts/mixins';
+@import '@sass/abstracts/vars';
+
+.zp-corporate-reports-component .report-download-link {
+  background-image: url('/images/common/download-icon.svg');
+}
+.zp-corporate-reports-component .report-content-section .report-download-link:hover {
+  background-image: url('/images/common/download-icon-hover.svg');
+}
+
+/////////////////
+
+.zp-h2-header__black {
+  font-family: var(--roboto-light);
+  color: var(--corp-text);
+  font-size: var(--corp-h2-mobile-size);
+  padding: var(--corp-mobile-padding);
+  line-height: 150%;
+  margin: 0 auto 38px;
+  box-sizing: content-box;
+
+  &--eight {
+    max-width: var(--corp-desktop-max-width-8-col);
+  }
+  &--ten {
+    max-width: var(--corp-desktop-max-width-10-col);
+  }
+  &--twelve {
+    max-width: var(--corp-desktop-max-width-12-col);
+  }
+  &--full {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .zp-h2-header__black {
+    font-size: var(--corp-h2-tablet-size);
+    padding: var(--corp-tablet-padding);
+  }
+}
+
+@media (min-width: 1199px) {
+  .zp-h2-header__black {
+    font-size: var(--corp-h2-desktop-size);
+    padding: var(--corp-desktop-padding);
+  }
+}
+
+/////////////////
+
+.zp-corporate-code-of-conduct-files {
+  padding: var(--corp-mobile-padding);
+  width: 100%;
+  margin-bottom: 38px;
+
+  /** adding margin-top: -35px to remove extra space above AP ****/
+  .file-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-top: -35px;
+  }
+  .file-download-section {
+    border-bottom: 1px solid var(--corp-text-color-grey);
+    font-size: 18px;
+    font-family: var(--roboto);
+    line-height: 160%;
+    position: relative;
+    padding: 15px 0 5px 0;
+    display: block;
+    color: var(--black);
+    text-decoration: none;
+  }
+  .file-download-link {
+    position: absolute;
+    right: 0;
+  }
+  .file-download-link:hover .file-download-icon {
+    content: url('/images/common/download-icon-hover.svg');
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (min-width: 768px) {
+  .zp-corporate-code-of-conduct-files {
+    padding: var(--corp-tablet-padding);
+
+    .file-list {
+      -webkit-columns: 2;
+      -moz-columns: 2;
+      columns: 2;
+      column-gap: 15px;
+    }
+    .file-download-section {
+      font-size: 21px;
+    }
+  }
+}
+@media (min-width: 1199px) {
+  .zp-corporate-code-of-conduct-files {
+    width: var(--corp-8-col-percentage);
+    max-width: var(--corp-desktop-max-width-8-col);
+    box-sizing: content-box;
+    margin: 0 auto 38px auto;
+  }
+}
+
+////////////
+
+.zp-corporate-para-section {
+  font-size: 16px;
+  line-height: 160%;
+  margin: 0 auto 38px;
+  font-family: var(--roboto);
+  padding: var(--corp-mobile-padding);
+  box-sizing: content-box;
+
+  &--eight {
+    max-width: var(--corp-desktop-max-width-8-col);
+  }
+  &--ten {
+    max-width: var(--corp-desktop-max-width-10-col);
+  }
+  &--twelve {
+    max-width: var(--corp-desktop-max-width-12-col);
+  }
+  &--full {
+    max-width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .zp-corporate-para-section {
+    padding: var(--corp-tablet-padding);
+  }
+}
+@media (min-width: 1199px) {
+  .zp-corporate-para-section {
+    font-size: 18px;
+    line-height: 28.8px;
+    box-sizing: content-box;
+
+    padding: var(--corp-desktop-padding);
+  }
+}

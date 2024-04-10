@@ -1,0 +1,412 @@
+@import '@sass/abstracts/mixins';
+@import '@sass/abstracts/vars';
+
+// Map
+
+.component-world-map {
+  .map-content-section {
+    display: none;
+  }
+  .map-content-parent-section {
+    margin-bottom: 0;
+  }
+  .map-country-list-section {
+    width: 100%;
+  }
+  .title {
+    margin-bottom: 30px;
+    font-size: var(--corp-body-l-size);
+    line-height: 150%;
+    font-family: var(--roboto-light);
+  }
+  .map-country-list-item {
+    font-family: var(--roboto);
+    font-size: var(--corp-body-l-size);
+    line-height: 150%;
+    color: var(--black);
+    cursor: pointer;
+  }
+  .map-country-list-item:not(:last-child) {
+    padding-bottom: 15px;
+  }
+  .map-country-select {
+    padding: 10px 0;
+    width: 100%;
+    font-family: var(--roboto-light);
+    font-size: var(--corp-h3-mobile-size);
+    line-height: 150%;
+    border-bottom: 1px solid var(--corp-tertiary);
+    color: var(--black);
+    position: relative;
+  }
+  .map-country-list {
+    padding: 0;
+    display: none;
+    border: 0;
+    max-height: 200px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
+    overflow-y: scroll;
+    background: var(--white);
+    padding: 20px 28px;
+    list-style-type: none;
+    position: absolute;
+    width: calc(100% - 70px);
+    z-index: 1;
+  }
+  .map-country-list-item:last-child {
+    padding-bottom: 0;
+  }
+  .map-country-list.is-show {
+    display: block;
+  }
+  .map-country-select .dropdown-arrow {
+    position: absolute;
+    width: 16px;
+    height: 11px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .map-country-list {
+    scrollbar-width: 5px;
+    scrollbar-color: var(--black);
+  }
+  .map-country-list::-webkit-scrollbar {
+    width: 2px;
+  }
+  /* Track */
+  .map-country-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  /* Handle */
+  .map-country-list::-webkit-scrollbar-thumb {
+    background: var(--black);
+  }
+}
+
+@media (min-width: 768px) {
+  .component-world-map {
+    margin-bottom: 38px;
+
+    .map-content-section {
+      display: block;
+    }
+    .map-content-top-section {
+      position: relative;
+    }
+    .map-country-list-section {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 230px;
+    }
+    .map-country-list {
+      width: 100%;
+      margin-top: 10px;
+      max-height: 190px;
+      display: none;
+    }
+    .map-country-list.is-show {
+      display: block;
+    }
+    .title {
+      margin-bottom: 15px;
+      line-height: 140%;
+      font-size: var(--corp-h4-tablet-size);
+    }
+    .map-country-select {
+      font-family: var(--roboto);
+      font-size: var(--corp-body-l-size);
+      line-height: 150%;
+      padding: 14px 20px;
+      border: 1px solid var(--corp-tertiary);
+      position: relative;
+      display: flex;
+      align-items: center;
+      border-radius: 8px;
+    }
+    .map-country-select .dropdown-arrow {
+      width: 14px;
+      height: 7px;
+      right: 19px;
+    }
+    .map-country-list-item {
+      font-family: var(--roboto);
+      font-size: var(--corp-body-m-size);
+      cursor: pointer;
+    }
+    .map-content-section {
+      position: relative;
+    }
+    .map-content-section .map-hotspot-point {
+      position: absolute;
+    }
+    .map-hotspot-list {
+      padding: 0;
+      list-style: none;
+    }
+    .map-image {
+      width: 100%;
+    }
+    .map-hotspot-point:before {
+      position: relative;
+      background-image: url('/images/common/map_hotspot_default.svg');
+      display: block;
+      content: '';
+      width: 11px;
+      height: 11px;
+      background-size: cover;
+      z-index: 1;
+    }
+    .map-hotspot-point.selected:before {
+      background-image: url('/images/common/map_hotspot_selected.svg');
+      width: 21px;
+      height: 21px;
+      top: -5px;
+      left: -5px;
+    }
+  }
+}
+
+@media (min-width: 1199px) {
+  .component-world-map {
+    .map-country-list-section {
+      width: 320px;
+      height: 200px;
+    }
+    .map-hotspot-point:before {
+      width: 15px;
+      height: 15px;
+    }
+    .map-hotspot-point.selected:before {
+      width: 29px;
+      height: 29px;
+      top: -7px;
+      left: -7px;
+    }
+    .title {
+      font-size: var(--corp-h4-desktop-size);
+    }
+    .map-country-select {
+      font-size: var(--corp-body-xl-size);
+    }
+    .map-country-list-item {
+      font-size: var(--corp-body-l-size);
+    }
+    .map-country-list {
+      max-height: 200px;
+    }
+  }
+}
+
+// ============================
+// Opportunities & Capabilities
+// ============================
+
+/***CSS - Home page map info section, targetting ul and ol tags to imply figma styles ***/
+
+.zp-corporate-home-map-info-section {
+  .map-info-list-section {
+    background: var(--white);
+    background: rgba(0, 93, 98, 0.05);
+    padding: 30px;
+    font-family: var(--roboto);
+    color: var(--black);
+    font-size: var(--corp-body-m-size);
+    line-height: 160%;
+
+    .map-info-list-item {
+      display: none;
+
+      &.selected {
+        display: block;
+      }
+    }
+    .description {
+      margin-bottom: 38px;
+    }
+  }
+  .info-category-item {
+    margin-bottom: 20px;
+    .info-title {
+      font-family: var(--roboto-medium);
+      color: var(--corp-secondary);
+      font-size: var(--corp-h4-mobile-size);
+      line-height: 150%;
+      margin-bottom: 20px;
+    }
+    ul,
+    ol {
+      padding-left: 20px;
+      margin-bottom: 0;
+    }
+    &:last-child ul,
+    &:last-child ol {
+      margin-bottom: 0;
+    }
+  }
+}
+@media (min-width: 768px) {
+  .zp-corporate-home-map-info-section {
+    .info-category-item {
+      margin-bottom: 0;
+    }
+    .info-category-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 20px;
+    }
+  }
+}
+@media (min-width: 1199px) {
+  .zp-corporate-home-map-info-section {
+    .map-info-list-section {
+      font-size: var(--corp-body-l-size);
+    }
+    .info-category-item .info-title {
+      font-size: var(--corp-h4-desktop-size);
+    }
+    .info-category-item ul,
+    .info-category-item ol {
+      padding-left: 30px;
+    }
+  }
+}
+
+.ctry-placeholder:empty:before {
+  content: attr(data-placeholder);
+  opacity: 0.6;
+}
+
+.ctry-placeholder.page-editor__editable {
+  box-shadow: none !important;
+}
+
+/***Contact Us Page - hot spot info css***/
+
+// ============================
+// Offices
+// ============================
+
+/***Contact Us Page - hot spot info css***/
+.zp-corporate-contactus-map-info-section {
+  .map-info-list-item {
+    display: none;
+  }
+  .map-info-list-item.selected {
+    display: block;
+  }
+  .hotspot-info {
+    font-size: var(--corp-body-m-size);
+    font-family: var(--roboto);
+    color: var(--black);
+    line-height: 150%;
+
+    .solutions-list-section {
+      background-color: var(--corp-tertiary);
+      padding: 30px 30px 25px 30px;
+    }
+    .solutions-list {
+      padding: 0;
+      list-style: none;
+      column-count: 2;
+      column-gap: 5px;
+      margin-bottom: 0;
+    }
+    .subheading-lbl {
+      line-height: 160%;
+      margin-bottom: 10px;
+      font-family: var(--roboto-light);
+    }
+    .solutions-list-item {
+      margin-bottom: 5px;
+    }
+    .address-section {
+      background: rgba(0, 93, 98, 0.05);
+      padding: 20px 30px 30px 30px;
+    }
+    .country-name {
+      margin-bottom: 10px;
+      font-family: var(--roboto-light);
+    }
+    .address-list-item {
+      font-size: var(--corp-body-s-size);
+      font-family: var(--roboto);
+      line-height: 160%;
+      width: 80%;
+    }
+    .address-list-item + .address-list-item {
+      margin-top: 15px;
+
+      .address:empty {
+        margin-bottom: -15px;
+      }
+    }
+    .address-list-item .address-heading {
+      font-family: var(--roboto-bold);
+      margin-bottom: 5px;
+    }
+    .address {
+      margin-bottom: 10px;
+    }
+  }
+}
+@media (min-width: 768px) {
+  .zp-corporate-contactus-map-info-section {
+    .hotspot-info {
+      display: flex;
+
+      .solutions-list-section {
+        width: 23%;
+      }
+      &.no-address-section {
+        display: block;
+      }
+      &.no-address-section .solutions-list-section {
+        width: 100%;
+        max-width: none;
+      }
+      .address-section {
+        padding: 30px;
+        width: 77%;
+      }
+      .solutions-list {
+        column-count: 1;
+      }
+      .address-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .address-list-item {
+        width: 70%;
+      }
+      .address-list-item + .address-list-item {
+        margin-top: 0;
+      }
+      .solutions-list-item:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+@media (min-width: 1199px) {
+  .zp-corporate-contactus-map-info-section {
+    .hotspot-info {
+      .solutions-list-section {
+        width: 28.5%;
+      }
+      .address-section {
+        width: 72.5%;
+      }
+      .subheading-lbl,
+      .country-name {
+        font-size: var(--corp-body-l-size);
+      }
+      .address-list-item {
+        font-size: var(--corp-body-m-size);
+      }
+    }
+  }
+}
+/***End contact us map info section***/
+

@@ -1,0 +1,96 @@
+@import '@sass/abstracts/mixins';
+@import '@sass/abstracts/vars';
+
+.component-cta-card {
+  .zp-corp-cta {
+    position: relative;
+    z-index: 0;
+    margin: auto;
+    margin: 38px 35px;
+  }
+
+  .zp-corp-cta--12-col {
+    max-width: var(--corp-desktop-max-width-12-col);
+  }
+
+  .zp-corp-cta--10-col {
+    max-width: var(--corp-desktop-max-width-10-col);
+  }
+
+  .zp-corp-cta--8-col {
+    max-width: var(--corp-desktop-max-width-8-col);
+  }
+
+  .zp-corp-cta--full-width {
+    width: 100%;
+    padding: 0 !important;
+  }
+
+  .zp-corp-cta__background {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center left;
+  }
+
+  .zp-corp-cta__content-section {
+    padding: 35px;
+    margin: auto;
+  }
+
+  .zp-corp-cta__title {
+    font-family: var(--roboto-light);
+    color: var(--black);
+    font-size: var(--corp-h2-mobile-size);
+    line-height: 125%;
+    margin-bottom: 20px;
+    max-width: 685px;
+  }
+
+  .zp-corp-cta__description {
+    font-family: var(--roboto);
+    font-size: var(--corp-body-s-size);
+    line-height: 160%;
+    margin-bottom: 20px;
+    max-width: 685px;
+  }
+
+  @include zp-cta-transition-button();
+
+  @media (min-width: 768px) {
+    .zp-corp-cta {
+      margin: 38px 70px;
+
+      .zp-corp-cta__content-section {
+        padding: 35px 70px;
+      }
+
+      .zp-corp-cta__title {
+        font-size: var(--corp-h2-tablet-size);
+      }
+
+      .zp-corp-cta__description {
+        font-size: var(--corp-body-m-size);
+      }
+    }
+  }
+
+  @media (min-width: 1199px) {
+    .zp-corp-cta {
+      margin: 38px auto;
+
+      .zp-corp-cta__title {
+        font-size: var(--corp-h2-desktop-size);
+      }
+
+      .zp-corp-cta__description {
+        font-size: var(--corp-body-l-size);
+      }
+    }
+  }
+}
+

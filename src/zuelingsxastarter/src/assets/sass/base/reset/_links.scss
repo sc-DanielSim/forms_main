@@ -1,0 +1,9 @@
+@import '@sass/abstracts/mixins';
+@import '@sass/abstracts/vars';
+
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,54 @@
+@import '@sass/abstracts/mixins';
+@import '@sass/abstracts/vars';
+
+/***CSS - Inner page Breadcrumb component ***/
+.zp-corporate-breadcrumb-section {
+  &.corp-component {
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 10px;
+
+    .breadcrumb-list {
+      display: block;
+      list-style: none;
+      margin-bottom: 0;
+      margin-top: 20px;
+      padding: 0;
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+
+      &:hover {
+        color: var(--corp-primary) !important;
+      }
+
+      .breadcrumb-list-link {
+        font-family: var(--roboto);
+        font-size: var(--corp-body-xs-size);
+        color: var(--corp-text-color-grey);
+        text-decoration: none;
+      }
+      .breadcrumb-list-link:not(:first-child):before {
+        content: ' / ';
+        padding-left: 2px;
+        padding-right: 2px;
+        font-size: var(--corp-body-xs-size);
+        color: inherit;
+      }
+      .breadcrumb-list-item {
+        display: inline;
+      }
+      .breadcrumb-list-item:hover,
+      .breadcrumb-list-link:hover {
+        cursor: pointer;
+        text-decoration: none;
+      }
+
+      .breadcrumb-list-link:hover {
+        color: var(--corp-primary) !important;
+      }
+    }
+  }
+}

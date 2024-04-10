@@ -1,0 +1,197 @@
+@import '@sass/abstracts/mixins';
+@import '@sass/abstracts/vars';
+
+.zp-corporate-articles-filter-section {
+  .articles-category-select {
+    background: transparent;
+    border: 1px solid var(--corp-text-color-grey);
+    padding: 5px 32px;
+    position: relative;
+    font-size: 18px;
+    font-family: var(--Roboto);
+    line-height: 180%;
+    width: 320px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-align: left;
+  }
+  .articles-category-select .arrow-img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 18px;
+  }
+  .articles-category-list {
+    width: 320px;
+    border: 1px solid #efefef;
+    position: absolute;
+    background: var(--white);
+    box-shadow: 0 10px 10px rgb(0, 0, 0, 15%);
+    z-index: 1;
+  }
+  .articles-category-list-item {
+    display: block;
+    color: var(--black);
+    font-size: 18px;
+    font-family: var(--Roboto);
+    line-height: 125%;
+    text-align: left;
+    padding: 10px 32px;
+    border-bottom: 1px solid #efefef;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .articles-filter-section {
+    display: inline-block;
+  }
+}
+
+/////////////////
+
+/** Article Listing **/
+.zp-corporate-article-list {
+  .no-article-list-found-section {
+    margin-top: 22px;
+    margin-bottom: 82px;
+    font-size: var(--corp-h2-mobile-size);
+    line-height: 125%;
+    font-family: var(--roboto-light);
+    color: var(--black);
+
+    .title {
+      font: inherit;
+      color: inherit;
+    }
+  }
+}
+@media (min-width: 768px) {
+  .zp-corporate-article-list .no-article-list-found-section {
+    font-size: var(--corp-h2-tablet-size);
+    margin-bottom: 22px;
+  }
+}
+@media (min-width: 1199px) {
+  .zp-corporate-article-list .no-article-list-found-section {
+    font-size: var(--corp-h2-desktop-size);
+    margin-bottom: 82px;
+  }
+}
+
+.zp-corporate-article-list .article-list-item {
+  margin-bottom: 38px;
+
+  .img-section {
+    margin-bottom: 20px;
+  }
+  .img-section .article-img {
+    height: 215px;
+    object-fit: cover;
+  }
+  .btn-section {
+    margin-bottom: 6px;
+  }
+  .article-btn {
+    background: conic-gradient(
+      from -7.17deg at -13.16% 84.09%,
+      #e8eeee10 0deg,
+      #005d6210 101.6deg,
+      #e8eeee10 360deg
+    );
+    border-radius: 25px;
+    border: none;
+    padding: 6px 15px;
+    color: var(--corp-primary);
+    font-family: var(--roboto-medium);
+    font-size: var(--corp-body-m-size);
+    line-height: 19px;
+    display: inline-block;
+    margin-right: 4px;
+    margin-bottom: 10px;
+  }
+  .title {
+    font-size: var(--corp-body-l-size);
+    line-height: 150%;
+    color: var(--corp-primary);
+    margin-bottom: 16px;
+    font-family: var(--roboto-medium);
+  }
+  .subtitle,
+  .published-date {
+    font-size: var(--corp-body-s-size);
+    line-height: 160%;
+    color: var(--corp-text-color-grey);
+    margin-bottom: 16px;
+    font-family: var(--roboto);
+  }
+  .published-date {
+    margin-bottom: 0;
+  }
+  .article-detail-page-link {
+    text-decoration: none;
+  }
+}
+@media (min-width: 768px) {
+  .zp-corporate-article-list .article-list-item {
+    .img-section .article-img {
+      height: 225px;
+    }
+    .btn-section {
+      margin-bottom: 8px;
+    }
+    .title {
+      margin-bottom: var(--corp-body-l-size);
+      font-size: var(--corp-h4-tablet-size);
+    }
+    .subtitle {
+      margin-bottom: 18px;
+    }
+  }
+}
+@media (min-width: 1199px) {
+  .zp-corporate-article-list .article-list-item {
+    .img-section .article-img {
+      height: 246px;
+    }
+    .title {
+      font-size: var(--corp-h4-desktop-size);
+      line-height: 140%;
+    }
+    .subtitle,
+    .published-date {
+      font-size: var(--corp-body-m-size);
+    }
+  }
+}
+
+/**Pagination and Load More **/
+.article-list-pagination-section {
+  margin-bottom: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  .load-more {
+    padding: 12px 70px;
+    background-color: var(--white);
+    color: var(--black);
+    font-size: var(--corp-body-m-size);
+    line-height: 180%;
+    font-family: var(--roboto);
+    border: 1px solid var(--black);
+    outline: 0;
+  }
+  .load-more:hover {
+    background-color: var(--black);
+    color: var(--white);
+  }
+}
+.zp-corporate-article-list .article-list {
+  margin-bottom: 22px;
+}
+@media (min-width: 768px) {
+  .article-list-pagination-section .load-more {
+    font-size: var(--corp-body-l-size);
+  }
+}

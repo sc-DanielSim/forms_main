@@ -1,0 +1,121 @@
+@import '@sass/abstracts/mixins';
+@import '@sass/abstracts/vars';
+
+/**CSS - Inner page banner**/
+.zp-corporate-banner-section {
+  margin: auto;
+  min-height: 375px;
+  margin-top: -54px;
+  position: relative;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  background: linear-gradient(268.63deg, rgba(25, 93, 97, 0.1) 15.43%, rgba(0, 93, 98, 0) 58.87%);
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: darken;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+    z-index: 0;
+  }
+  .inner-page-banner-image {
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  .banner-content-section {
+    padding: 65px 35px;
+    /*
+   position: absolute;
+   top: 50%;
+   transform:translateY(-50%);
+   left: 0;
+   right: 0;
+     */
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .banner-title {
+    font-size: var(--corp-h1-mobile-size);
+    line-height: 56px;
+    font-family: var(--roboto-light);
+    margin-bottom: 0;
+    padding: 0;
+  }
+
+  .banner-description {
+    margin-top: 20px;
+    font-size: var(--corp-body-l-size);
+    line-height: 29px;
+    font-family: var(--roboto);
+    padding: 0;
+    margin-bottom: 0;
+    max-width: 570px;
+  }
+
+  .banner-text-title,
+  .banner-text-description {
+    @include ellipsis(6);
+  }
+
+  .banner-text-description {
+    -webkit-line-clamp: 9;
+  }
+
+  &.has-bottom-border {
+    border-bottom: 1px solid var(--corp-text-color-grey);
+  }
+}
+
+@media (min-width: 768px) {
+  .zp-corporate-banner-section {
+    min-height: 350px;
+
+    .banner-content-section {
+      padding: 70px;
+    }
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1198px) {
+}
+
+@media (min-width: 1199px) {
+  .zp-corporate-banner-section {
+    padding: 0;
+    min-height: 300px;
+
+    .banner-content-section {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      box-sizing: content-box;
+      max-width: var(--corp-desktop-max-width-12-col);
+    }
+
+    .banner-title,
+    .banner-description {
+      padding: 0;
+    }
+
+    .banner-title {
+      font-size: var(--corp-h1-desktop-size);
+      line-height: 125%;
+    }
+  }
+}

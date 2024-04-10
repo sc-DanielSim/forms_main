@@ -1,0 +1,80 @@
+// ----- DEFAULT SITECORE TEMPLATE -----
+
+html {
+}
+
+body {
+}
+
+a {
+}
+
+.xa-variable {
+  border: 0px;
+  padding: 1px;
+  margin: 0px;
+  background-color: #ebebe4;
+  color: #545454;
+  user-select: none;
+  pointer-events: none;
+}
+
+//Navigation Bar fix
+#breadcrumbMenuSubcontrol_context_menu * {
+  box-sizing: initial;
+}
+
+//End navigation bar fix
+.menu-mobile-navigate {
+  display: none;
+}
+
+#header,
+#content,
+#footer,
+.sc-jss-empty-placeholder {
+  width: 100%;
+  // display: flex;
+  // flex-wrap: wrap;
+}
+
+.sc-jss-placeholder-error {
+  background: #ff0000;
+  outline: 5px solid #e36565;
+  padding: 10px;
+  color: #fff;
+  max-width: 500px;
+}
+
+.editing-mode {
+  padding: 0 8px;
+}
+
+// ----- CUSTOMIZE FOR ZP CORPORATE -----
+
+$distanceTypes: (margin, padding);
+$distancePositions: (top, bottom);
+$distanceSizes: (large, small, 5s, 4s, 3s, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1);
+
+@each $t in $distanceTypes {
+  @each $p in $distancePositions {
+    @each $s in $distanceSizes {
+      .zp-#{$t}-#{$p}-#{$s} {
+        @if ($s==large) {
+          #{$t}-#{$p}: var(--spacer-8, 7.5rem) !important;
+        } @else if ($s==small) {
+          #{$t}-#{$p}: var(--spacer-5, 3rem) !important;
+        } @else if ($s==5s) {
+          #{$t}-#{$p}: var(--spacer-5, 3rem) !important;
+        } @else if ($s==4s) {
+          #{$t}-#{$p}: var(--spacer-4, 1.5rem) !important;
+        } @else if ($s==3s) {
+          #{$t}-#{$p}: var(--spacer-3, 1rem) !important;
+        } @else {
+          #{$t}-#{$p}: var(--spacer-#{$s}, #{$s}rem) !important;
+        }
+      }
+    }
+  }
+}
+
