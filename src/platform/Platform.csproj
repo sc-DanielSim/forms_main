@@ -78,10 +78,12 @@
     <Content Include="App_Data\**" />
   </ItemGroup>
   <ItemGroup>
-     <None Include="SitecoreSupport\*.*">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    <!-- Define your custom files to be copied after the build -->
+    <MyCustomFiles Include="SitecoreSupport\Sitecore.ExperienceEdge.Connector.EntityGenerator.dll" />
   </ItemGroup>
+  <Target Name="CopyCustomFilesAfterBuild" AfterTargets="Build">
+    <Copy SourceFiles="@(MyCustomFiles)" DestinationFolder="$(OutputPath)" />
+  </Target>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
