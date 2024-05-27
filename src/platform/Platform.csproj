@@ -78,7 +78,9 @@
     <Content Include="App_Data\**" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="SitecoreSupport\" />
+     <None Include="SitecoreSupport\*.*">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
