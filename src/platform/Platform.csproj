@@ -81,7 +81,7 @@
     <!-- Define your custom files to be copied after the build -->
     <MyCustomFiles Include="SitecoreSupport\Sitecore.ExperienceEdge.Connector.EntityGenerator.dll" />
   </ItemGroup>
-  <Target Name="CopyCustomFilesAfterBuild" AfterTargets="Build">
+  <Target Name="CopyCustomFilesAfterBuild" AfterTargets="AfterBuild">
     <Copy SourceFiles="@(MyCustomFiles)" DestinationFolder="$(OutputPath)" />
   </Target>
   <PropertyGroup>
