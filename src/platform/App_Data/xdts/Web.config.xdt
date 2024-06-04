@@ -14,6 +14,6 @@
     <system.web>
         <httpRuntime requestPathInvalidCharacters="&lt;,&gt;,*,%,:,\,?" requestValidationMode="2.0" xdt:Transform="SetAttributes" xdt:Locator="Condition(@requestValidationMode='4.0')"></httpRuntime>
         <pages validateRequest="false" xdt:Transform="SetAttributes" xdt:Locator="Condition(@validateRequest='true')"></pages>
-        <customErrors mode="Off" xdt:Transform="SetAttributes" xdt:Locator="Condition(@mode='RemoteOnly')"/>
+        <customErrors mode="Off" xdt:Transform="SetAttributes" xdt:Locator="Condition(@mode!='Off')"/>
     </system.web>
 </configuration>
