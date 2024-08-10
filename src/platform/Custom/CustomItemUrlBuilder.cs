@@ -32,7 +32,8 @@ namespace XmCloudSXAStarter.Custom
         {
             LogDiagnostic("Building item url via CustomtemUrlBuilder");
             LogDiagnostic($"Item ID: {item.ID} | Item Name: {item.Name} | options.Site: {options.Site.Name} | context.Site: {Context.Site.Name}");
-            LogDiagnostic($"Context.Request: {Context.Request} | Context.User: {Context.GetUserName()} | Context.GetSiteName: {Context.GetSiteName()} | context.Site: {Context.Site.Name}");
+            LogDiagnostic($"Context.Request.ItemPath: {Context.Request.ItemPath} | Context.Request.FilePath: {Context.Request.FilePath} | Context.sc_site Cookie: {Context.Request.GetCookie("sc_site")}" +
+            $"| Context.User: {Context.GetUserName()} | Context.GetSiteName: {Context.GetSiteName()} | context.Site: {Context.Site.Name}");
 
             if (item == null)
             {
