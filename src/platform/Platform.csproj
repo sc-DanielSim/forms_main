@@ -63,23 +63,31 @@
     <PackageReference Include="Sitecore.XmCloud.LayoutService" />
     <PackageReference Include="Sitecore.XmCloud.Assemblies" />
     <PackageReference Include="Sitecore.Assemblies.SitecoreHeadlessServicesServer" />
+    <PackageReference Include="Sitecore.XmCloud.Logging">
+      <Version>1.6.46</Version>
+    </PackageReference>
+    <PackageReference Include="Sitecore.XmCloud.XA.Foundation.Multisite">
+      <Version>1.6.46</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Config\Include\**" />
+    <Content Include="App_Config\Include\zzz\CustomItemUrlBuilder.config" />
     <None Include="Platform.wpp.targets" />
     <None Include="Properties\PublishProfiles\Local.pubxml" />
     <None Include="README.md" />
     <None Include="web.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Config\Include\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="App_Data\**" />
   </ItemGroup>
   <ItemGroup>
     <!-- Define your custom files to be copied after the build -->
     <MyCustomFiles Include="SitecoreSupport\Sitecore.ExperienceEdge.Connector.EntityGenerator.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Custom\CustomItemUrlBuilder.cs" />
   </ItemGroup>
   <Target Name="CopyCustomFilesAfterBuild" AfterTargets="AfterBuild">
     <Copy SourceFiles="@(MyCustomFiles)" DestinationFolder="$(OutputPath)" />
