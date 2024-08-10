@@ -32,6 +32,8 @@ namespace XmCloudSXAStarter.Custom
         {
             LogDiagnostic("Building item url via CustomtemUrlBuilder");
             LogDiagnostic($"Item ID: {item.ID} | Item Name: {item.Name} | options.Site: {options.Site.Name} | context.Site: {Context.Site.Name}");
+            LogDiagnostic($"Context.Request: {Context.Request} | Context.User: {Context.GetUserName()} | Context.GetSiteName: {Context.GetSiteName()} | context.Site: {Context.Site.Name}");
+
             if (item == null)
             {
                 var result = base.Build(item, options);
