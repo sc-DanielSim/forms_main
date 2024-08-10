@@ -63,12 +63,8 @@
     <PackageReference Include="Sitecore.XmCloud.LayoutService" />
     <PackageReference Include="Sitecore.XmCloud.Assemblies" />
     <PackageReference Include="Sitecore.Assemblies.SitecoreHeadlessServicesServer" />
-    <PackageReference Include="Sitecore.XmCloud.Logging">
-      <Version>1.6.46</Version>
-    </PackageReference>
-    <PackageReference Include="Sitecore.XmCloud.XA.Foundation.Multisite">
-      <Version>1.6.46</Version>
-    </PackageReference>
+    <PackageReference Include="Sitecore.XmCloud.Logging" />
+    <PackageReference Include="Sitecore.XmCloud.XA.Foundation.Multisite" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Config\Include\**" />
