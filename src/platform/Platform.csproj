@@ -44,6 +44,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Sitecore.ExperienceEdge.Connector.EntityGenerator">
+      <HintPath>..\..\..\ExperienceEdge.Connectors.XM\src\Sitecore.ExperienceEdge.Connector.EntityGenerator\bin\Debug\Sitecore.ExperienceEdge.Connector.EntityGenerator.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
