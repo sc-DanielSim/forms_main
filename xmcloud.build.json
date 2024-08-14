@@ -17,7 +17,7 @@
               "/sitecore/shell",
               "/sitecore/shell/Applications/Content%20Editor.aspx?sc_bw=1",
               "/sitecore/client/Applications/Launchpad",
-              "/sitecore/shell/client/Applications/MApp"
+              "/sitecore/shell/client/applications/mapp/index.aspx"
             ]
           },
           "populateSchema": {
