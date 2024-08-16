@@ -71,7 +71,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Config\Include\**" />
-    <Content Include="App_Config\Include\zzz\CustomItemUrlBuilder.config" />
+    <!-- <Content Include="App_Config\Include\zzz\CustomItemUrlBuilder.config" /> -->
     <None Include="Platform.wpp.targets" />
     <None Include="Properties\PublishProfiles\Local.pubxml" />
     <None Include="README.md" />
