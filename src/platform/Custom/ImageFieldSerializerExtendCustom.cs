@@ -47,8 +47,8 @@ namespace XmCloudSXAStarter.Custom
             }
             foreach (HtmlAttribute attribute in (IEnumerable<HtmlAttribute>)htmlNode1.Attributes)
                 renderedImage[attribute.Name] = HttpUtility.HtmlDecode(attribute.Value);
-            
-            if(renderedImage.ContainsKey("dam-id") && renderedImage["dam-id"].Length > 0)
+
+            if (renderedImage.ContainsKey("dam-id") && renderedImage["dam-id"].Length > 0)
             {
                 renderedImage["stylelabs-content-id"] = renderedImage["dam-id"];
                 renderedImage["stylelabs-content-type"] = renderedImage["dam-content-type"];
@@ -56,4 +56,5 @@ namespace XmCloudSXAStarter.Custom
 
             return (IDictionary<string, string>)renderedImage;
         }
+    }
 }
