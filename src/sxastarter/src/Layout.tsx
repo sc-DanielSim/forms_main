@@ -8,7 +8,6 @@ import {
   Placeholder,
   useSitecoreContext,
 } from '@sitecore-jss/sitecore-jss-nextjs';
-import { signIn } from 'next-auth/react';
 import { Inter } from 'next/font/google';
 import Head from 'next/head';
 import { useEffect, useState } from 'react';
@@ -77,9 +76,9 @@ const Layout = ({ layoutData, headLinks }: LayoutProps): JSX.Element => {
           isLoginRequired &&
           sitecoreContext?.pageState !== 'edit'
         ) {
-          await signIn().catch((error) => {
-            console.error(error);
-          });
+          // await signIn().catch((error) => {
+          //   console.error(error);
+          // });
           // If additional token response handling is needed, do it here.
         }
         if (status === 'authenticated') setIsLoading(false);
